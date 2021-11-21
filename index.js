@@ -13,7 +13,7 @@ const server=http.createServer((req,res)=>{
     }
 
     else if(req.url=="/video"){
-        fs.readFile("./bunny.mp4",(err,data)=>{
+        fs.readFile("./cake.mp4",(err,data)=>{
             if(!err){
                 res.writeHead(200,{'Content-type':"video/mp4"});
                 res.write(data);
@@ -24,9 +24,9 @@ const server=http.createServer((req,res)=>{
     }
 
 
-    else if(req.url="/books"){
+    else if(req.url="/book"){
             res.writeHead(200,{'Content-type':"application/json"});
-            res.write(JSON.stringify({data:[{Name:"NODEJS",Author:"Sir Anudeep",Publisher:"Edyoda"}]}));
+            res.write(JSON.stringify({data:[{BookName:"NODEjs1",Author:"Anudeep"}]}));
             res.end();
         }
         else{
